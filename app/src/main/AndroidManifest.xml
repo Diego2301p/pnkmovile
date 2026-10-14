@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <application
+        android:name=".PnkApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.PNK">
+
+        <!-- 1. Splash Screen (Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PNK.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 3. Recuperar Contraseña -->
+        <activity
+            android:name=".RecuperarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 4. Crear Contraseña -->
+        <activity
+            android:name=".CrearPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 5. Registro Usuario (desde Login) -->
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 6. Menú Principal -->
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+
+        <!-- 7. Gestión de Usuarios -->
+        <activity
+            android:name=".GestionUsuariosActivity"
+            android:exported="false" />
+
+        <!-- 8. Registro CRUD (desde Gestión) -->
+        <activity
+            android:name=".RegistroCrudActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 9. Listar Usuarios -->
+        <activity
+            android:name=".ListarUsuariosActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 10. Modificar/Eliminar Usuario -->
+        <activity
+            android:name=".ModificarUsuarioActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 11. Datos Sensores -->
+        <activity
+            android:name=".SensoresActivity"
+            android:exported="false" />
+
+        <!-- 12. Datos Desarrollador -->
+        <activity
+            android:name=".DesarrolladorActivity"
+            android:exported="false" />
+
+        <!-- Original MainActivity (no longer used as launcher) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
